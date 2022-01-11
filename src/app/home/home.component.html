@@ -1,0 +1,13 @@
+<div id="main-wrapper">
+  <div id="grid-wrapper">
+    <div *ngFor="let book of book_array" class="book">
+      <a [routerLink]="['book', book.id]">
+        <img [src]="'assets/' + book.image" [alt]="book.title"/>
+        <br><em>{{book.title}}</em>
+      </a>
+      <br>{{book.author}}
+      <br>Qty: {{book.quantity}}
+    </div>
+    <h2 *ngIf="err" class='error'>{{err}}</h2>
+  </div>
+</div>

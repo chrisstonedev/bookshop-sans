@@ -1,0 +1,21 @@
+<div id="main-wrapper">
+  <div id="login-wrapper">
+    <h2 *ngIf="err_msg">{{err_msg}}</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" name="login">
+      <div>
+        <label for="username">Username</label>
+        <input formControlName="username" id="username" name="username" type="text">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input formControlName="password" id="password" name="password" type="password">
+      </div>
+      <div>
+        <label for="remember_me">Remember Me</label>
+        <input formControlName="remember_me" id="remember_me" name="remember" type="checkbox" value="1">
+      </div>
+      <button class="button" name="login" type="submit">Login</button>
+    </form>
+    <p><a routerLink="/register">or click here to register with a new account</a></p>
+  </div>
+</div>

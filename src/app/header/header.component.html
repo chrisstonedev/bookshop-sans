@@ -1,0 +1,14 @@
+<header id="head">
+  <p><a routerLink="/">Bookshop</a></p>
+</header>
+<nav>
+  <div><a routerLink="/cart">Cart</a></div>
+  <ng-container *ngIf="loggedIn">
+    <div><a routerLink="/account">Account</a></div>
+    <div><a routerLink="/logout">Logout</a></div>
+  </ng-container>
+  <ng-container *ngIf="!loggedIn">
+    <div><a routerLink="/register">Register</a></div>
+    <div><a routerLink="/login">Login</a></div>
+  </ng-container>
+</nav>
